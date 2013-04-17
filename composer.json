@@ -1,5 +1,6 @@
 {
     "name": "webriq/gridguyz-openid",
+    "type": "gridguyz-module",
     "description": "OpenID module for Gridguyz",
     "license": "CC-BY-SA-3.0",
     "keywords": [
@@ -29,6 +30,7 @@
     },
     "require": {
         "php": ">=5.4",
+        "webriq/gridguyz-installer": "*",
         "webriq/gridguyz-core": "*"
     },
     "autoload": {
