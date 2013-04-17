@@ -1,0 +1,12 @@
+<?php
+
+$this->headLink()
+     ->appendStylesheet( '/styles/modules/User/login.css', 'all' );
+
+?>
+
+<div class="openid custom-provider">
+    <h3><?= $this->translate( 'user.form.openId.title', 'user' ) ?></h3>
+    <?= $this->form( $this->form, 'user' ) ?>
+
+</div>
