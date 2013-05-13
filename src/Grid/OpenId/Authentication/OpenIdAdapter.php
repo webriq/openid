@@ -3,11 +3,9 @@
 namespace Grid\OpenId\Authentication;
 
 use Zork\Stdlib\String;
-use Zork\OpenId\Extension\Ax;
 use Zend\Authentication\Result;
 use Zork\Model\ModelAwareTrait;
 use Zork\Model\ModelAwareInterface;
-use Zork\OpenId\Consumer\FederatedConsumer;
 use Zork\Model\Structure\StructureAbstract;
 use Grid\User\Model\User\Structure as UserStructure;
 use Zork\ServiceManager\ServiceLocatorAwareTrait;
@@ -91,8 +89,8 @@ class OpenIdAdapter extends StructureAbstract
         $model      = $this->getModel();
         $mode       = $this->openid_mode;
         $openId     = $this->openid_identity;
-        $consumer   = new FederatedConsumer();
-        $ax         = new Ax( array(
+        $consumer   = new Consumer\FederatedConsumer;
+        $ax         = new Extension\Ax( array(
             'firstname' => true,
             'lastname'  => true,
             'email'     => true,
