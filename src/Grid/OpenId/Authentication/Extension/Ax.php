@@ -238,6 +238,10 @@ class Ax extends AbstractExtension
             {
                 $props[$prop] = $params['openid_ext1_value_' . $prop];
             }
+            else if ( ! empty( $params['openid_ax_type_' . $prop] ) )
+            {
+                $props[$prop] = $params['openid_ax_value_' . $prop];
+            }
         }
 
         if ( isset( $this->_props ) && is_array( $this->_props ) )

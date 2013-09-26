@@ -91,9 +91,9 @@ class OpenIdAdapter extends StructureAbstract
         $openId     = $this->openid_identity;
         $consumer   = new Consumer\FederatedConsumer;
         $ax         = new Extension\Ax( array(
-            'firstname' => true,
-            'lastname'  => true,
             'email'     => true,
+            'firstname' => false,
+            'lastname'  => false,
             'language'  => false,
         ) );
 
