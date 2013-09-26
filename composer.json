@@ -43,6 +43,9 @@
         ]
     },
     "extra": {
+        "display-icon": {
+            "63": "https://raw.github.com/gridguyz/openid/%reference%/icons/63x63.png"
+        },
         "display-name": {
             "en": "OpenID Sign On"
         },
