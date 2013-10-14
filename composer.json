@@ -52,8 +52,6 @@
         "display-description": {
             "en": "If you have an OpenID account, you are perfectly aware of the advantage of not having to maintain several users and passwords. With an OpenID account, you can access tons of popular websites including GridGuyz without having to separately sign up on each of them. Here are some of the major providers you can access with OpenID: Google, Yahoo!, PayPal, AOL, IBM, BBC, GridGuyz, etc.\n\nWhen you install this package, you can enable your visitors to access your website with OpenID.\nDon't have an OpenID account yet? Here is where you can get more info and even sign up for an account: <http://openid.net>."
         },
-        "modules": {
-            "Grid\\OpenId": "OpenID login"
-        }
+        "module": "Grid\\OpenId"
     }
 }
