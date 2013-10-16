@@ -129,7 +129,8 @@ class OpenIdAdapter extends StructureAbstract
             );
         }
 
-        $user = $model->findByEmail( $data['email'] );
+        $email  = $data['email'];
+        $user   = $model->findByEmail( $email );
 
         if ( empty( $user ) )
         {
@@ -158,7 +159,7 @@ class OpenIdAdapter extends StructureAbstract
             }
             else
             {
-                $displayName = preg_replace( '/@.*$/', '', $data['email'] );
+                $displayName = preg_replace( '/@.*$/', '', $email );
             }
 
             $i = 1;
@@ -174,7 +175,7 @@ class OpenIdAdapter extends StructureAbstract
                 'confirmed'     => true,
                 'status'        => 'active',
                 'displayName'   => $displayName,
-                'email'         => $data['email'],
+                'email'         => $email,
                 'locale'        => ! empty( $data['language'] )
                                    ? $data['language']
                                    : (string) $this->getServiceLocator()
@@ -185,6 +186,7 @@ class OpenIdAdapter extends StructureAbstract
             if ( $user->save() )
             {
                 $registered = true;
+                $user       = $model->findByEmail( $email );
             }
             else
             {
@@ -195,7 +197,7 @@ class OpenIdAdapter extends StructureAbstract
             }
         }
 
-        if ( empty( $user->id ) || $user->isBanned() )
+        if ( empty( $user ) || empty( $user->id ) || $user->isBanned() )
         {
             return new Result(
                 Result::FAILURE_CREDENTIAL_INVALID,
