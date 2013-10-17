@@ -2,7 +2,6 @@
 
 namespace Grid\OpenId\Controller;
 
-use Zend\Authentication\AuthenticationService;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zork\Session\ContainerAwareTrait as SessionContainerAwareTrait;
 
@@ -76,7 +75,8 @@ class AuthenticationController extends AbstractActionController
      */
     public function customProviderAction()
     {
-        $auth = new AuthenticationService();
+        $auth = $this->getServiceLocator()
+                     ->get( 'Zend\Authentication\AuthenticationService' );
 
         if ( $auth->hasIdentity() )
         {
