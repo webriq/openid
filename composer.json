@@ -1,38 +1,32 @@
 {
-    "name": "gridguyz/openid",
-    "type": "gridguyz-module",
-    "description": "OpenID module for Gridguyz CMS",
-    "license": "CC-BY-SA-3.0",
+    "name": "webriqcms/openid",
+    "type": "webriqcms-module",
+    "description": "OpenID module for WebriQ CMS",
+    "license": "BSD-3-Clause",
     "keywords": [
-        "gridguyz",
+        "webriqcms",
         "module",
         "openid",
         "login"
     ],
-    "homepage": "http://gridguyz.com/",
+    "homepage": "http://webriq.com/",
     "authors": [
         {
-            "name": "Mihály Farkas",
-            "email": "mihaly.farkas@megaweb.hu",
-            "homepage": "http://gridguyz.com/",
-            "role": "Developer"
-        },
-        {
-            "name": "David Pozsar",
-            "email": "david.pozsar@megaweb.hu",
-            "homepage": "http://gridguyz.com/",
-            "role": "Developer"
+            "name": "WebriQ Dev Team",
+            "email": "info@webriq.com",
+            "homepage": "http://webriq.com/",
+            "role": "Development Team"
         }
     ],
     "support": {
-        "email": "dev@megaweb.hu",
-        "source": "https://github.com/gridguyz/openid"
+        "email": "info@webriq.com",
+        "source": "https://github.com/webriq/openid"
     },
     "require": {
         "php": ">=5.4",
         "zendframework/zendopenid": "2.*",
-        "gridguyz/module-installer": "*",
-        "gridguyz/core": "*"
+        "webriqcms/module-installer": "*",
+        "webriqcms/core": "*"
     },
     "autoload": {
         "psr-0": {
@@ -44,7 +38,7 @@
     },
     "extra": {
         "display-icon": {
-            "63": "https://raw.github.com/gridguyz/openid/%reference%/icons/63x63.png"
+            "63": "https://raw.github.com/webriq/openid/%reference%/icons/63x63.png"
         },
         "display-name": {
             "en": "OpenID Sign On"
