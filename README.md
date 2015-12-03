@@ -1,4 +1,4 @@
-OpenID module for Gridguyz
+OpenID module for WebriQ CMS
 ==========================
 
 OpenID module enables your users to log-in using their OpenID account.
@@ -12,6 +12,6 @@ Available OpendID providers:
 License
 -------
 
-Gridguyz is under **Creative Commons Attribution-ShareAlike 3.0** (cc-by-sa-3.0).
+WebriQ CMS is under BSD License.
 More info at [LICENSE.txt](LICENSE.txt).
 
